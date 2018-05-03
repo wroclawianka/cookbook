@@ -1,5 +1,8 @@
 # Cookbook
 
+Final project of course - Angular 5 with Maximilian Schwarzmüller, Udemy [Angular 5 - The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/). 
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
 
 ## Development server
