@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/wroclawianka/cookbook/master/cookbook.jpg"/>
+</p>
+
 # Cookbook
 
 Final project of course - Angular 5 with Maximilian Schwarzmüller, Udemy [Angular 5 - The Complete Guide](https://www.udemy.com/the-complete-guide-to-angular-2/). 
