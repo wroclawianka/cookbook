@@ -92,6 +92,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_detail_recipe_detail_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_header_header_component__ = __webpack_require__("../../../../../src/app/components/header/header.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_recipe_book_recipe_book_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_shared_dropdown_directive__ = __webpack_require__("../../../../../src/app/components/shared/dropdown.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -108,11 +109,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__components_header_header_component__["a" /* HeaderComponent */],
@@ -122,6 +124,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__components_recipe_book_recipe_list_recipe_list_component__["a" /* RecipeListComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__components_recipe_book_recipe_list_recipe_item_recipe_item_component__["a" /* RecipeItemComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_detail_recipe_detail_component__["a" /* RecipeDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_shared_dropdown_directive__["a" /* DropdownDirective */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
@@ -158,7 +161,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\r\n    <div class=\"container-fluid\">\r\n        <div class=\"navbar-header\">\r\n            <a href=\"#\" class=\"navbar-brand\">\r\n                <i class=\"fa fa-cutlery\"></i> CookBook\r\n            </a>\r\n        </div>\r\n        <div class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav\">\r\n                <li><a href=\"#\" (click)=\"onSelect('recipes')\">Recipies</a></li>\r\n                <li><a href=\"#\" (click)=\"onSelect('shopping-list')\">Shopping List</a></li>\r\n            </ul>\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li class=\"dropdown\">\r\n                    <a href=\"#\" class=\"dropdown-toggle\" role=\"button\">\r\n          Manage Data\r\n          <span class=\"caret\"></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a href=\"#\">Sava Data</a></li>\r\n                        <li><a href=\"#\">Fetch Data</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default\">\r\n    <div class=\"container-fluid\">\r\n        <div class=\"navbar-header\">\r\n            <a href=\"#\" class=\"navbar-brand\">\r\n                <i class=\"fa fa-cutlery\"></i> CookBook\r\n            </a>\r\n        </div>\r\n        <div class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav\">\r\n                <li><a href=\"#\" (click)=\"onSelect('recipes')\">Recipies</a></li>\r\n                <li><a href=\"#\" (click)=\"onSelect('shopping-list')\">Shopping List</a></li>\r\n            </ul>\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li appDropdown class=\"dropdown\">\r\n                    <a href=\"#\" class=\"dropdown-toggle\" role=\"button\">\r\n          Manage Data\r\n          <span class=\"caret\"></span></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li><a href=\"#\">Sava Data</a></li>\r\n                        <li><a href=\"#\">Fetch Data</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -186,7 +189,7 @@ var HeaderComponent = /** @class */ (function () {
         this.featureSelected.emit(featureSelected);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
         __metadata("design:type", Object)
     ], HeaderComponent.prototype, "featureSelected", void 0);
     HeaderComponent = __decorate([
@@ -255,7 +258,7 @@ var RecipeBookComponent = /** @class */ (function () {
         this.selectedRecipe = recipe;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */])
     ], RecipeBookComponent.prototype, "selectedRecipe", void 0);
     RecipeBookComponent = __decorate([
@@ -294,7 +297,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <img [src]=\"recipe.imagePath\" alt=\"{{ recipe.name }}\" class=\"img-responsive\">\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <h1>{{ recipe.name }}</h1>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <div class=\"btn-group\">\r\n      <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\r\n        Manage Recipe\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\">\r\n        <li>\r\n          <a href=\"#\">Add to Shopping List</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Edit Recipe</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Delete Recipe</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    {{ recipe.description }}\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    Ingredients\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <img [src]=\"recipe.imagePath\" alt=\"{{ recipe.name }}\" class=\"img-responsive\">\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <h1>{{ recipe.name }}</h1>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <div appDropdown class=\"btn-group\">\r\n      <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\r\n        Manage Recipe\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\">\r\n        <li>\r\n          <a href=\"#\">Add to Shopping List</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Edit Recipe</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Delete Recipe</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    {{ recipe.description }}\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    Ingredients\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -322,7 +325,7 @@ var RecipeDetailComponent = /** @class */ (function () {
     RecipeDetailComponent.prototype.ngOnInit = function () {
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */])
     ], RecipeDetailComponent.prototype, "recipe", void 0);
     RecipeDetailComponent = __decorate([
@@ -393,11 +396,11 @@ var RecipeItemComponent = /** @class */ (function () {
         this.recipeSelected.emit();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */])
     ], RecipeItemComponent.prototype, "recipe", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
         __metadata("design:type", Object)
     ], RecipeItemComponent.prototype, "recipeSelected", void 0);
     RecipeItemComponent = __decorate([
@@ -474,7 +477,7 @@ var RecipeListComponent = /** @class */ (function () {
         this.recipeWasSelected.emit(recipe);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
         __metadata("design:type", Object)
     ], RecipeListComponent.prototype, "recipeWasSelected", void 0);
     RecipeListComponent = __decorate([
@@ -504,6 +507,51 @@ var Recipe = /** @class */ (function () {
         this.imagePath = imagePath;
     }
     return Recipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/shared/dropdown.directive.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DropdownDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DropdownDirective = /** @class */ (function () {
+    function DropdownDirective() {
+        this.isOpen = false;
+    }
+    DropdownDirective.prototype.toggleOpen = function () {
+        this.isOpen = !this.isOpen;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* HostBinding */])('class.open'),
+        __metadata("design:type", Boolean)
+    ], DropdownDirective.prototype, "isOpen", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* HostListener */])('click'),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], DropdownDirective.prototype, "toggleOpen", null);
+    DropdownDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* Directive */])({
+            selector: '[appDropdown]'
+        })
+    ], DropdownDirective);
+    return DropdownDirective;
 }());
 
 
@@ -600,15 +648,15 @@ var ShoppingListEditComponent = /** @class */ (function () {
         this.ingredientAdded.emit(newIngredient);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_2" /* ViewChild */])('nameInput'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* ViewChild */])('nameInput'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ElementRef */])
     ], ShoppingListEditComponent.prototype, "nameInputRef", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_2" /* ViewChild */])('amountInput'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* ViewChild */])('amountInput'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ElementRef */])
     ], ShoppingListEditComponent.prototype, "amountInputRef", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Output */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
         __metadata("design:type", Object)
     ], ShoppingListEditComponent.prototype, "ingredientAdded", void 0);
     ShoppingListEditComponent = __decorate([
@@ -722,7 +770,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
