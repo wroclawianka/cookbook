@@ -811,8 +811,7 @@ var ShoppingListService = /** @class */ (function () {
         this.ingredientsChange.emit(this.ingredients.slice());
     };
     ShoppingListService.prototype.addIngredients = function (newIngredients) {
-        // this.ingredients = this.ingredients.concat(newIngredients);
-        (_a = this.ingredients).push.apply(_a, this.ingredients); //spread!
+        (_a = this.ingredients).push.apply(_a, newIngredients); //spread!
         this.ingredientsChange.emit(this.ingredients.slice());
         var _a;
     };
