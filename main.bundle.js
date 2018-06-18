@@ -85,20 +85,22 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_shopping_list_shopping_list_component__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shopping_list_shopping_list_edit_shopping_list_edit_component__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list-edit/shopping-list-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_recipe_book_recipe_list_recipe_list_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_recipe_book_recipe_list_recipe_item_recipe_item_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-item/recipe-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_detail_recipe_detail_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_header_header_component__ = __webpack_require__("../../../../../src/app/components/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_recipe_book_recipe_book_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_shared_dropdown_directive__ = __webpack_require__("../../../../../src/app/components/shared/dropdown.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_shopping_list_shopping_list_service__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_shopping_list_shopping_list_component__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_shopping_list_shopping_list_edit_shopping_list_edit_component__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list-edit/shopping-list-edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_recipe_book_recipe_list_recipe_list_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_list_recipe_item_recipe_item_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-item/recipe-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_recipe_book_recipe_detail_recipe_detail_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_header_header_component__ = __webpack_require__("../../../../../src/app/components/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_recipe_book_recipe_book_component__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_shared_dropdown_directive__ = __webpack_require__("../../../../../src/app/components/shared/dropdown.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -117,19 +119,19 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_3__components_shopping_list_shopping_list_component__["a" /* ShoppingListComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__components_shopping_list_shopping_list_edit_shopping_list_edit_component__["a" /* ShoppingListEditComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_recipe_book_recipe_book_component__["a" /* RecipeBookComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__components_recipe_book_recipe_list_recipe_list_component__["a" /* RecipeListComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_recipe_book_recipe_list_recipe_item_recipe_item_component__["a" /* RecipeItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_detail_recipe_detail_component__["a" /* RecipeDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_shared_dropdown_directive__["a" /* DropdownDirective */]
+                __WEBPACK_IMPORTED_MODULE_9__components_header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__components_shopping_list_shopping_list_component__["a" /* ShoppingListComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__components_shopping_list_shopping_list_edit_shopping_list_edit_component__["a" /* ShoppingListEditComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_recipe_book_recipe_book_component__["a" /* RecipeBookComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__components_recipe_book_recipe_list_recipe_list_component__["a" /* RecipeListComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_recipe_book_recipe_list_recipe_item_recipe_item_component__["a" /* RecipeItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_recipe_book_recipe_detail_recipe_detail_component__["a" /* RecipeDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_shared_dropdown_directive__["a" /* DropdownDirective */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__components_shopping_list_shopping_list_service__["a" /* ShoppingListService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -227,7 +229,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/recipe-book/recipe-book.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-5\">\r\n        <app-recipe-list (recipeWasSelected)=\"recipeSelected($event)\"></app-recipe-list>\r\n    </div>\r\n    <div class=\"col-md-7\">\r\n        <app-recipe-detail \r\n        *ngIf=\"selectedRecipe; else infoText\" \r\n        [recipe]=\"selectedRecipe\">\r\n    </app-recipe-detail>\r\n        <ng-template #infoText>\r\n            <p>Please select the recipe</p>\r\n        </ng-template>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-5\">\r\n        <app-recipe-list></app-recipe-list>\r\n    </div>\r\n    <div class=\"col-md-7\">\r\n        <app-recipe-detail \r\n        *ngIf=\"selectedRecipe; else infoText\" \r\n        [recipe]=\"selectedRecipe\">\r\n    </app-recipe-detail>\r\n        <ng-template #infoText>\r\n            <p>Please select the recipe</p>\r\n        </ng-template>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -237,7 +239,7 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-5\">\r\n       
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeBookComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_model__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_service__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -250,24 +252,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var RecipeBookComponent = /** @class */ (function () {
-    function RecipeBookComponent() {
+    function RecipeBookComponent(recipeService) {
+        this.recipeService = recipeService;
     }
     RecipeBookComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.recipeService.recipieSelected.subscribe(function (recipe) { return _this.selectedRecipe = recipe; });
     };
     RecipeBookComponent.prototype.recipeSelected = function (recipe) {
         this.selectedRecipe = recipe;
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */])
-    ], RecipeBookComponent.prototype, "selectedRecipe", void 0);
     RecipeBookComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-recipe-book',
             template: __webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/recipe-book/recipe-book.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__recipe_service__["a" /* RecipeService */]]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__recipe_service__["a" /* RecipeService */]])
     ], RecipeBookComponent);
     return RecipeBookComponent;
 }());
@@ -297,7 +299,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <img [src]=\"recipe.imagePath\" alt=\"{{ recipe.name }}\" class=\"img-responsive\">\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <h1>{{ recipe.name }}</h1>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <div appDropdown class=\"btn-group\">\r\n      <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\r\n        Manage Recipe\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\">\r\n        <li>\r\n          <a href=\"#\">Add to Shopping List</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Edit Recipe</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Delete Recipe</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    {{ recipe.description }}\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    Ingredients\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <img [src]=\"recipe.imagePath\" alt=\"{{ recipe.name }}\" class=\"img-responsive\">\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <h1>{{ recipe.name }}</h1>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <div appDropdown class=\"btn-group\">\r\n      <button type=\"button\" class=\"btn btn-primary dropdown-toggle\">\r\n        Manage Recipe\r\n        <span class=\"caret\"></span>\r\n      </button>\r\n      <ul class=\"dropdown-menu\">\r\n        <li>\r\n          <a href=\"#\" (click)=\"addToShoppingList()\">Add to Shopping List</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Edit Recipe</a>\r\n        </li>\r\n        <li>\r\n          <a href=\"#\">Delete Recipe</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    {{ recipe.description }}\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <ul>\r\n      <li class=\"list-group-item\" *ngFor=\"let ingredient of recipe.ingredients\">\r\n        {{ ingredient.name }} - {{ ingredient.amount }}\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -308,6 +310,7 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <img
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeDetailComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_model__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopping_list_shopping_list_service__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -319,10 +322,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var RecipeDetailComponent = /** @class */ (function () {
-    function RecipeDetailComponent() {
+    function RecipeDetailComponent(shoppingListService) {
+        this.shoppingListService = shoppingListService;
     }
     RecipeDetailComponent.prototype.ngOnInit = function () {
+    };
+    RecipeDetailComponent.prototype.addToShoppingList = function () {
+        this.shoppingListService.addIngredients(this.recipe.ingredients);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
@@ -334,7 +342,7 @@ var RecipeDetailComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/recipe-book/recipe-detail/recipe-detail.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__shopping_list_shopping_list_service__["a" /* ShoppingListService */]])
     ], RecipeDetailComponent);
     return RecipeDetailComponent;
 }());
@@ -375,6 +383,7 @@ module.exports = "<a href=\"#\" class=\"list-group-item clearfix\" (click)=onSel
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeItemComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_model__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recipe_service__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -386,30 +395,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var RecipeItemComponent = /** @class */ (function () {
-    function RecipeItemComponent() {
-        this.recipeSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+    function RecipeItemComponent(recipeService) {
+        this.recipeService = recipeService;
     }
     RecipeItemComponent.prototype.ngOnInit = function () {
     };
     RecipeItemComponent.prototype.onSelected = function () {
-        this.recipeSelected.emit();
+        this.recipeService.recipieSelected.emit(this.recipe);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */])
     ], RecipeItemComponent.prototype, "recipe", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
-        __metadata("design:type", Object)
-    ], RecipeItemComponent.prototype, "recipeSelected", void 0);
     RecipeItemComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-recipe-item',
             template: __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-item/recipe-item.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-item/recipe-item.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__recipe_service__["a" /* RecipeService */]])
     ], RecipeItemComponent);
     return RecipeItemComponent;
 }());
@@ -439,7 +445,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/recipe-book/recipe-list/recipe-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n        <button class=\"btn btn-success\">New Recipe</button>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n        <app-recipe-item \r\n        *ngFor=\"let recipeEl of recipies\" \r\n        [recipe]=\"recipeEl\" \r\n        (recipeSelected)=\"onRecipeSelected(recipeEl)\">\r\n    </app-recipe-item>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n        <button class=\"btn btn-success\">New Recipe</button>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n        <app-recipe-item \r\n        *ngFor=\"let recipeEl of recipies\" \r\n        [recipe]=\"recipeEl\">\r\n    </app-recipe-item>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -449,7 +455,7 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-xs-12\">\r\n      
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeListComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_model__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_service__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -462,31 +468,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var RecipeListComponent = /** @class */ (function () {
-    function RecipeListComponent() {
-        this.recipeWasSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
-        this.recipies = [
-            new __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */]('Pierogi ruskie', "filled dumplings of Central European origin\n     made by wrapping unleavened dough around\n     a savory or sweet filling and cooking in boiling water.", 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Pierogi_z_cebulk%C4%85.jpg'),
-            new __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */]('Svíčková na smetaně', "typical Czech dish and one of the most popular Czech meals. It is sirloin steak\n     prepared with vegetables, spiced with black pepper, allspice, bay leaf and thyme,\n     and boiled with double cream.", 
-            // tslint:disable-next-line:max-line-length
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG/440px-Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG"),
-        ];
+    function RecipeListComponent(recipeService) {
+        this.recipeService = recipeService;
     }
     RecipeListComponent.prototype.ngOnInit = function () {
+        this.recipies = this.recipeService.getRecipies();
     };
-    RecipeListComponent.prototype.onRecipeSelected = function (recipe) {
-        this.recipeWasSelected.emit(recipe);
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
-        __metadata("design:type", Object)
-    ], RecipeListComponent.prototype, "recipeWasSelected", void 0);
     RecipeListComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-recipe-list',
             template: __webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-list.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/recipe-book/recipe-list/recipe-list.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__recipe_service__["a" /* RecipeService */]])
     ], RecipeListComponent);
     return RecipeListComponent;
 }());
@@ -501,12 +495,57 @@ var RecipeListComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Recipe; });
 var Recipe = /** @class */ (function () {
-    function Recipe(name, description, imagePath) {
+    function Recipe(name, description, imagePath, ingredients) {
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
+        this.ingredients = ingredients;
     }
     return Recipe;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/recipe-book/recipe.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recipe_model__ = __webpack_require__("../../../../../src/app/components/recipe-book/recipe.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__ = __webpack_require__("../../../../../src/app/components/shared/ingredient.model.ts");
+
+
+
+var RecipeService = /** @class */ (function () {
+    function RecipeService() {
+        this.recipieSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+        this.recipies = this.recipies = [
+            new __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */]('Pierogi ruskie', "filled dumplings of Central European origin\n         made by wrapping unleavened dough around\n         a savory or sweet filling and cooking in boiling water.", 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Pierogi_z_cebulk%C4%85.jpg', [
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Semi-fat white cheese", 0.5),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Potatos", 0.5),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Wheat flour", 0.3),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Egg", 1),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Butter", 0.02),
+            ]),
+            new __WEBPACK_IMPORTED_MODULE_1__recipe_model__["a" /* Recipe */]('Svíčková na smetaně', "typical Czech dish and one of the most popular Czech meals. It is sirloin steak\n         prepared with vegetables, spiced with black pepper, allspice, bay leaf and thyme,\n         and boiled with double cream.", 
+            // tslint:disable-next-line:max-line-length
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG/440px-Sv%C3%AD%C4%8Dkov%C3%A1_na_smetan%C4%9B.JPG", [
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Sirloin", 0.75),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Onion", 3),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Butter", 0.02),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Wheat flour", 0.3),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Sour cream", 250),
+                new __WEBPACK_IMPORTED_MODULE_2__shared_ingredient_model__["a" /* Ingredient */]("Cranberry", 0.1),
+            ]),
+        ];
+    }
+    RecipeService.prototype.getRecipies = function () {
+        return this.recipies.slice(); // slice() in this case will return a copy of the array (not a reference)
+    };
+    return RecipeService;
 }());
 
 
@@ -581,6 +620,7 @@ var Ingredient = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ingredient; });
 var Ingredient = /** @class */ (function () {
+    //TODO: add pieces, grams...
     function Ingredient(name, amount) {
         this.name = name;
         this.amount = amount;
@@ -624,6 +664,7 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-12\">\r\n    <h4>
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShoppingListEditComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ingredient_model__ = __webpack_require__("../../../../../src/app/components/shopping-list/ingredient.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopping_list_service__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -635,9 +676,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ShoppingListEditComponent = /** @class */ (function () {
-    function ShoppingListEditComponent() {
-        this.ingredientAdded = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+    function ShoppingListEditComponent(shoppingListService) {
+        this.shoppingListService = shoppingListService;
     }
     ShoppingListEditComponent.prototype.ngOnInit = function () {
     };
@@ -645,7 +687,7 @@ var ShoppingListEditComponent = /** @class */ (function () {
         var name = this.nameInputRef.nativeElement.value;
         var amount = this.amountInputRef.nativeElement.value;
         var newIngredient = new __WEBPACK_IMPORTED_MODULE_1__ingredient_model__["a" /* Ingredient */](name, amount);
-        this.ingredientAdded.emit(newIngredient);
+        this.shoppingListService.addIngredient(newIngredient);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* ViewChild */])('nameInput'),
@@ -655,17 +697,13 @@ var ShoppingListEditComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_4" /* ViewChild */])('amountInput'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ElementRef */])
     ], ShoppingListEditComponent.prototype, "amountInputRef", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* Output */])(),
-        __metadata("design:type", Object)
-    ], ShoppingListEditComponent.prototype, "ingredientAdded", void 0);
     ShoppingListEditComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-shopping-list-edit',
             template: __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list-edit/shopping-list-edit.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/shopping-list/shopping-list-edit/shopping-list-edit.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__shopping_list_service__["a" /* ShoppingListService */]])
     ], ShoppingListEditComponent);
     return ShoppingListEditComponent;
 }());
@@ -705,7 +743,7 @@ module.exports = "<div class=\"row\">\r\n  <div class=\"col-xs-10\">\r\n    <h3>
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShoppingListComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_ingredient_model__ = __webpack_require__("../../../../../src/app/components/shared/ingredient.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shopping_list_service__ = __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -718,13 +756,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ShoppingListComponent = /** @class */ (function () {
-    function ShoppingListComponent() {
-        this.ingredients = [
-            new __WEBPACK_IMPORTED_MODULE_1__shared_ingredient_model__["a" /* Ingredient */]('Apples', 5),
-            new __WEBPACK_IMPORTED_MODULE_1__shared_ingredient_model__["a" /* Ingredient */]('Tomatoes', 10),
-        ];
+    function ShoppingListComponent(shoppingListService) {
+        this.shoppingListService = shoppingListService;
     }
     ShoppingListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.ingredients = this.shoppingListService.getIngredients();
+        this.shoppingListService.ingredientsChange
+            .subscribe(function (ingredients) {
+            _this.ingredients = ingredients;
+        });
     };
     ShoppingListComponent.prototype.onIngredientAdded = function (ingredient) {
         this.ingredients.push(ingredient);
@@ -735,9 +776,47 @@ var ShoppingListComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.component.html"),
             styles: [__webpack_require__("../../../../../src/app/components/shopping-list/shopping-list.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__shopping_list_service__["a" /* ShoppingListService */]])
     ], ShoppingListComponent);
     return ShoppingListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/shopping-list/shopping-list.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShoppingListService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ingredient_model__ = __webpack_require__("../../../../../src/app/components/shopping-list/ingredient.model.ts");
+
+
+var ShoppingListService = /** @class */ (function () {
+    function ShoppingListService() {
+        this.ingredientsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+        this.ingredients = [
+            new __WEBPACK_IMPORTED_MODULE_1__ingredient_model__["a" /* Ingredient */]('Apples', 5),
+            new __WEBPACK_IMPORTED_MODULE_1__ingredient_model__["a" /* Ingredient */]('Tomatoes', 10),
+        ];
+    }
+    //TODO: group ingredients with the same name
+    ShoppingListService.prototype.getIngredients = function () {
+        return this.ingredients.slice(); //slice() -> copy, not a reference!
+    };
+    ShoppingListService.prototype.addIngredient = function (ingredient) {
+        this.ingredients.push(ingredient);
+        this.ingredientsChange.emit(this.ingredients.slice());
+    };
+    ShoppingListService.prototype.addIngredients = function (newIngredients) {
+        // this.ingredients = this.ingredients.concat(newIngredients);
+        (_a = this.ingredients).push.apply(_a, this.ingredients); //spread!
+        this.ingredientsChange.emit(this.ingredients.slice());
+        var _a;
+    };
+    return ShoppingListService;
 }());
 
 
