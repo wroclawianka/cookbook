@@ -1,7 +1,33 @@
 img {
-    max-height: 200px;
+    max-height: 300px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 a {
     cursor: pointer;
+}
+
+.recipe-wrapper {
+    border: 1px solid #ddd;
+    padding: 10px 50px;
+}
+
+.intro{
+    display: flex;
+}
+
+.name {
+    flex: 3;
+}
+
+.action-btn {
+    flex: 1;
+    margin: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
