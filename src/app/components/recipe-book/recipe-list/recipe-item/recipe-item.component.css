@@ -1,3 +1,7 @@
 img.recipe {
     max-width: 50px;
 }
+
+a {
+    cursor: pointer;
+}
