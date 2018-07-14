@@ -1,7 +1,17 @@
-img.recipe {
-    max-width: 50px;
-}
-
 a {
     cursor: pointer;
+    display: flex;
+}
+
+.pull-left {
+    flex: 2;
+}
+
+.pull-right {
+    flex: 1
+}
+
+img.recipe {
+    max-width: 100%;
+    margin: 0 3px;
 }
