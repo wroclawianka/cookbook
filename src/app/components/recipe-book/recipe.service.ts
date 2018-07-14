@@ -7,6 +7,7 @@ export class RecipeService {
     recipieSelected = new EventEmitter<Recipe>(); 
     private recipies: Recipe[] = this.recipies = [
         new Recipe(
+            1,
             'Pierogi ruskie',
             `filled dumplings of Central European origin
          made by wrapping unleavened dough around
@@ -20,6 +21,7 @@ export class RecipeService {
             new Ingredient("Butter", 0.02), 
         ]),
         new Recipe(
+            2,
             'Svíčková na smetaně',
             `typical Czech dish and one of the most popular Czech meals. It is sirloin steak
          prepared with vegetables, spiced with black pepper, allspice, bay leaf and thyme,
@@ -39,4 +41,8 @@ export class RecipeService {
     getRecipies()  {
         return this.recipies.slice(); // slice() in this case will return a copy of the array (not a reference)
     }
+
+    getRecipe(id: number) : Recipe {
+        return this.recipies.find(r => r.id === id);
+      }
 }
